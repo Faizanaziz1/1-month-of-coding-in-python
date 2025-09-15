@@ -1,0 +1,50 @@
+#variables and data types
+a=1
+print(a)
+b="faizan"
+print(b)
+c=True
+print(c)
+d=None
+print(d)
+a1="faizan"
+a2="aziz"
+print(a1 +" "+ a2)
+print(type(a1))
+
+#data types
+#int #number #float #complex #str #boolean #list-mutable #tuple-immutable #dictionary
+list1=[4,5,6]
+print(list1)
+tuple1=("sparrow","cow")
+print(tuple1)
+print(type(tuple1))
+dict1={"faiz":"male","sadiya":"female"}
+print(dict1)
+print(type(dict1))
+
+# calculator in python
+a=int(input("enter a number"))
+b=int(input("enter a number"))
+
+c=input(("enter the operation: +,-,*,/:"))
+
+if c=="+":
+    print(a+b)
+elif c=="-":
+    print(a-b)
+elif c=="*":
+    print(a*b)
+elif c=="/":
+    print(a/b)  
+else:
+    print("wrong selection")
+#type casting
+a="1"
+b="2"
+print(int(a)+int(b))
+
+#taking user input
+
+x=input("enter your name")
+print("your name is",x+" "+"boss")
