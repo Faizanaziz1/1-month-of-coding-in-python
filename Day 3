@@ -1,0 +1,52 @@
+# #strings
+# name="faizan"
+# n='aziz'
+# print(name)
+# print(n)
+# print("hello"+name)
+
+# #multiline strings
+
+# a='''hi i guess we are good now, said stranger.
+# The man in shock didnt realize he was actually serious
+# He though he was joking, and this was just his another dream'''
+
+# print(a)
+
+# #accessing string
+# print(name[1]) 
+
+# #string slicing
+
+# n="Faizan"
+# print(n[0:2])
+# print(len(n))
+# print(n[0:-4])
+
+# #string operations
+
+a="Faizan!!!"
+print(a.upper())
+print(a.lower())
+print(a.rstrip("!"))
+print(a.replace("Faizan","aziz"))
+
+a="aziz"
+print(a.capitalize())
+print(a.center(50))
+print(a.count("z"))
+
+
+#if else statements
+
+n=-2
+
+if (n<0):
+    print("number is negative")
+elif (n>0):
+    if (n<10):
+        print("number is from 1 to 10")
+    else:
+        print("number is greater than 10")
+else:
+    print("number is zero")
