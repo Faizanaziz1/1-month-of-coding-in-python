@@ -1,0 +1,59 @@
+#function arguments
+
+# there are four types of arguments
+
+#default arguments
+
+def average(a=9, b=1): # here 9,1 are default arguments
+    print("the avg is:", (a+b/2)) 
+
+average()
+
+def average(a,b):
+    print("the avg is:", (a+b)/2)
+
+average(1,3) #here 1 and 3 are required arguments
+
+def name(fname, mname, lname):
+    print("hello,", fname, mname, lname)
+
+name("faizan", "aziz") #it will show error because lname is missing and it is required argument
+
+#lists in python
+
+#lists are ordered collection of data items
+
+#list items are separated by commas and enclosed within square brackets[]
+
+#lists can be altered after creation
+
+marks=[3,5,5]
+
+print(type(marks))
+print(marks)
+
+names=["faizan","aziz","ahanger"]
+print(names)
+
+#accessing list items
+print(names[0])
+
+if 3 in marks:
+    print("yes")
+else:
+    print("no")
+
+
+
+#list comprehension
+
+#helps in creation of lists from other iterables likes lists, tuples, dictionaries, etc
+
+lst=[i for i in range(4)]
+print(lst)
+
+lst=[i for i in range(10) if i%2==0] #only even numbers
+print(lst)
+
+
+print(names[0:3:2])
