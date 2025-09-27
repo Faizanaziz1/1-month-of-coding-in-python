@@ -1,1 +1,7 @@
 #list methods
+
+l.append()
+l.sort(reverse=true)
+l.sort
+print(l.index(1))
+print(l.count)
