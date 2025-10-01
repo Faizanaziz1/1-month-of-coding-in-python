@@ -1,7 +1,30 @@
-#list methods
+# list methods
 
-l.append()
-l.sort(reverse=true)
-l.sort
-print(l.index(1))
-print(l.count)
+l=[1,2,3,4,5,6,1]
+
+l.append(7) #adds on element on last
+
+l.sort(reverse=True) #sorts the list in descending order
+
+l.reverse() # reverse the list
+
+print(l.index(1)) # returns the first occurence
+
+print(l.count(1)) #counts the given value
+
+m=l.copy() #creates a new list, the original is unaffected
+m[0]=0 
+print(m)
+print(l)
+
+l.insert(7,65) #replaces the existing element with new one or adds the new one
+
+print(l)
+
+m=[200,400,500]
+
+l.extend(m) #adds two list
+
+
+
+print(l)
