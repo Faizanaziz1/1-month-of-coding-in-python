@@ -1,0 +1,27 @@
+#tuples
+
+tup  = (1,5,6,6,6,6,4,6,6,6)
+
+print(type(tup))
+
+
+#operations on tuple
+
+#manipulating tuple - first change into list
+
+temp=list(tup)
+
+temp.append(3)
+
+tup=tuple(temp)
+
+print(tup)
+
+res=tup.count(6) #counts no. of occurence
+print(res)
+
+res=tup.index(6,6,8) #shows index of element with particular range 6-8
+print(res)
+
+
+
