@@ -1,0 +1,111 @@
+#f-strings
+
+fname=input("enter your first name")
+lname=input("enter your last name")
+price=46.95854
+
+print(f"your name is {fname} {lname} {price:.2f}")
+
+#doc-strings
+
+def square(n):
+    '''takes the number n and 
+    returns the square of n'''
+    print(n**2)
+square(5)
+
+print(square.__doc__) 
+# doc strings comes right below the function
+
+#recursion
+
+#process of defining something in terms of itself
+
+#factorial
+
+def factorial(n):
+    if(n==0):
+        return 0
+    if(n==1):
+        return 1
+    else:
+        return n * factorial(n-1)
+    
+print(factorial(3))
+
+
+#fibonacci
+
+def Fibonacci(n):
+    if(n==0):
+        return 0
+    elif(n==1):
+        return 1
+    else :
+        return Fibonacci(n-1)+Fibonacci(n-2)
+
+#sets in python
+
+#set does not show repeated values
+
+#set is an unordered collection of items
+
+s={2,4,2,6}
+
+print(s)
+
+sk={"faizan",19,False}
+
+print(sk)
+
+#cant be accessed using index
+
+s=set() #empty set
+print(type(s))
+
+for value in sk:
+    print(value)
+
+# s1={1,2,5,6}
+# s2={2,6,7}
+
+# print(s1.union(s2)) #combines two sets overwriting common values
+
+# s1.update(s2)
+
+# print(s1, s2)
+
+s1={1,2,3,4}
+s2={3,4,5,6}
+
+s3=s1.intersection(s2)  #prints common values
+
+print(s3)
+
+#symmetric difference
+
+#prints different/uncommon values
+
+s1={1,2,3,4}
+s2={3,4,5,6}
+
+s3=s1.symmetric_difference(s2)
+print(s3)
+
+#isdisjoint
+
+#issuperset
+
+#issubset
+
+#update()
+#remove
+#pop
+#del
+#clear
+
+
+
+
+    
+print(Fibonacci(6))
