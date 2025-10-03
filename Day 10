@@ -1,0 +1,88 @@
+#dictionaries in python
+#dic are ordered collection of items
+
+dic= {"Harry":"Human being",
+      "spoon": "object"}
+
+print(dic)
+print(dic['Harry'])
+print(dic.get('harry')) #no error
+
+#used for storing marks, roll number, employee id, used for mapping 
+
+dic= {123:"faizan",
+      456:"aziz",
+      789:"ahanger"}
+print(dic)
+
+print(dic[456]) #accessing values thro key
+
+print(dic.keys()) #gets all the keys
+print(dic.values())
+
+for key in dic.keys(): #gets corresponding values of keys
+    print(dic[key])
+
+#dictionary methods
+
+ep1={122:45,123:89,567:69,607:69}
+
+ep2={128:48,132:98,570:69,670:49}
+
+ep1.update(ep2) #adds all the values of ep2 into ep1
+print(ep1)
+
+ep1.clear()
+print(ep1)
+
+ep1.pop(122)
+print(ep1)
+
+ep1.popitem()  #removes the last item from the dict
+print(ep1)
+
+del ep1
+print(ep1)  #deletes the entire dictionary
+
+del ep1[122]
+print(ep1)
+
+#for loops with else
+
+for i in range(5):
+    print(i)
+    if i==4:
+        break
+
+else:
+    print("finished")
+
+#exception handling
+
+a=input("enter the number")
+
+print("your number is:")
+
+try:
+    print(int(a))
+except Exception as e:
+    print("please enter a number")
+
+print("ty")
+
+#types of error
+
+#finally keyword
+
+#the finally block is always executed
+#helps in funnctions
+
+try:
+    l=[1,2,3,4,]
+    i=int(input("enter the index:"))
+    print(l[i])
+except:
+    print("some error occured")
+
+finally:
+    print("i am always executed")
