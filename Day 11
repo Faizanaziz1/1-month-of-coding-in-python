@@ -1,0 +1,27 @@
+#raising custom errors
+
+a = int(input("enter any value between 4 and 6"))
+
+if (a<4 or a>6):
+    raise ValueError("wrong value")
+else:
+    print(a)
+
+
+#short hand if else statements
+
+a=2
+b=2 
+print("a") if a>b else print("b") if b>a else print("==")
+
+#enumerate functions
+
+#allows to loop over a sequence
+
+marks=[20,30,40,60,20,40]
+
+for index, mark in enumerate(marks):
+    print(mark)
+    if(index==3):
+        print("threee")
+        
