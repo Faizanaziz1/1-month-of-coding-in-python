@@ -1,0 +1,20 @@
+#virtual environment
+
+#useful when working on projects that have different package versions
+
+#how import works in python
+
+from math import pi,sqrt as s
+
+import math
+print(dir(math))
+
+# if __name__=="__main__":
+
+#used in python scripts to determine whether the scrpit is being run directly or being imported as a module into another script
+
+#os module
+
+#it allows us to interact with the files in the system with operations such as reading writing
+
+#using commands such as mkdir, rename
