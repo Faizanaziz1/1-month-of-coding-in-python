@@ -1,0 +1,84 @@
+#map filter and reduce
+
+#map
+
+def cube(x):
+    return x*x*x
+
+print(cube(2))
+
+l=[1,2,3,44,5]
+newl=list(map(cube,l))
+print(newl)
+
+#filter
+
+def filter_function(a):
+    return a>4
+
+newnewl=list(filter(lambda x: x>4,l))
+print(newnewl)
+
+#reduce
+
+from functools import reduce
+
+numbers=[1,2,3,4,5,6]
+
+def mysum(x,y):
+    return x+y
+
+sum=reduce(mysum, numbers)
+print(sum)
+
+#is vs ==
+
+a=4
+b="4"
+
+print( a is b)  #exact location of object in memory
+print(a==b) #value
+
+a=[1,4,3]
+b=[1,4,3]
+
+print( a is b)  #exact location of object in memory
+print(a==b) #value
+
+#oop
+
+#oop uses class and objects to represent real world concepts
+
+#making things easier for us
+
+# a class is template or blueprint for creating the objects . 
+# it defines the properties and methods that an object  of that class will have
+
+#encapsulation-internal state of the object is hidden, 
+# polymorphism-object of different classes can be treated as if they are from the same class, 
+# inheritance-which allows new classes to be created that inherit the properties and methods of an existing class
+
+#python classes and objects
+
+class person:
+    name="faizan"
+    occupation="doc"
+    age=25
+
+    def info(self):
+        print(f"{self.name} is a {self.occupation}")    
+
+
+a=person()
+a.name="Aziz"
+a.occupation="eng"
+
+print(a.name,a.occupation)
+
+a.info()
+
+
+
+
+
+
