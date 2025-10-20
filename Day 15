@@ -1,0 +1,149 @@
+#constructor
+#helps in creating and intializing an object
+
+class person:
+
+    def __init__(self,n,o):
+        print("hey i am a person")
+        self.name=n
+        self.occ=o
+
+    def info(self):
+        print(f"{self.name} is a {self.occ}")
+    
+
+a=person("harry","dev")
+b=person("divya","hr")
+
+a.info()
+b.info()
+
+#always returns non
+
+#default constructor(self)
+#parametrized constructor (self and args)
+
+#decorators
+
+#changes other functions a bit, takes a function, changes and then returns it
+
+#in other words, modifies the behavior of the functions
+
+def greet(fx):
+    def mfx():
+        print("good morning")
+        fx()
+        print("Thank you for using this function")
+    return mfx
+
+@greet
+
+def hello():
+    print("hello world")
+
+hello()
+
+# greet(hello)()
+
+#now if a function has some arguments then
+
+
+def greet(fx):
+    def mfx(*args,**kwargs):
+        print("good morning")
+        fx(*args,**kwargs)
+        print("Thank you for using this function")
+    return mfx
+
+@greet
+def add(a,b):
+    print(a+b)
+
+add(1,2)
+
+# greet(add)(1,2)
+#getters and setters
+
+# getters are methods that are used to access the values of an object properties
+
+class MyClass:
+    def __init__(self,value):
+        self._value=value
+    
+    def show(self):
+        print(f"the value is {self._value}")
+
+    @property
+    def ten_value(self):
+        return 10*self._value
+
+    @ten_value.setter
+    def ten_value(self, new_value):
+        self._value=new_value/10
+        return 
+
+obj=MyClass(10)
+obj.ten_value=67 #we cannot set any value through getters, for that we have setters
+print(obj.ten_value)
+obj.show()
+#inheritance
+
+#classes and sub classes
+
+#when a class derives from another class
+
+class Employee:
+    def __init__(self, name, id):
+        self.name= name
+        self.id= id
+        
+    def showdeets(self):
+     print(f"The name of employee: {self.id} is {self.name}")
+
+class programmer(Employee):
+   def showlang(self):
+      print("the default language is python")
+
+e= Employee("faizan",42)
+e.showdeets()
+e1=programmer("faizan",42)
+e1.showlang()
+#access modifiers
+
+#public, private, protected
+
+#public (by defualt) can be access from outside the class
+#private cant be accessed from outside the class
+#protected can be accessed only from within the class and from subclasses
+
+#public
+
+class Employee:
+    def __init__(self):
+        self.name="Harry"
+
+a=Employee()
+print(a.name)
+
+#private (__)
+
+class Employee:
+    def __init__(self):
+        self.__name="Harry"
+
+a=Employee() 
+# print(a.__name) #will show error, since it is a private
+print(a._Employee__name) #private access modifier can be accessed through name mangling/indirectly
+
+#protected (_)
+
+
+
+
+
+
+
+
+
+
+    
