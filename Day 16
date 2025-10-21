@@ -1,0 +1,41 @@
+#static methods
+#they belong to a class rather than the instance of the class
+
+class Math:
+
+    def __init__(self,num):
+        self.num =num
+
+    def addtonum(self,n):
+        self.num=self.num+n
+
+    @staticmethod
+    def add(a,b): #no need of slef
+        return a+b
+
+a=Math(5)
+print(a.num)
+a.addtonum(6)
+print(a.num)
+
+#instance variables vs class variables
+
+#class variables are shared among all the instances of the class
+
+class Employee:
+    companyname="apple" #class variable, same for everyone
+    def __init__(self,name):
+        self.name=name
+        self.raise_amount=0.2
+    
+    def showdetails(self):
+        print(f"the name of the employee is {self.name} and the raise amount in {self.companyname} is {self.raise_amount}")
+
+emp1=Employee("Harry")
+emp1.raise_amount=0.04 #instance variable, different for everyone
+emp1.showdetails()
+emp2=Employee("Faizan")
+emp2.showdetails()
+
+#if instance present then it is shown, if not then class
+
