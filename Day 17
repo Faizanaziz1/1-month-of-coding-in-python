@@ -1,0 +1,50 @@
+#class methods
+#classes are a way to store data and define funcs that can manipulate the data
+#one type that can be defined within a class is method 
+#class methods are defined using @classmethod
+
+class Employee:
+    company="apple"
+    def show(self):
+        print(f"The name of the employee is {self.name} and company is {self.company}")
+    
+    @classmethod
+    def changecompany(cls, newCompany):
+        cls.company=newCompany
+
+e1=Employee()
+e1.name="faiz"
+e1.changecompany("tesla")
+e1.show()
+
+#class methods as alt constructors
+#handles multiple types of input data convienently
+
+class Employee:
+    def __init__(self,name,salary):
+        self.name=name
+        self.salary=salary
+
+    @classmethod
+
+    def fromStr(cls, string):
+        return cls(string.split("-")[0],string.split("-")[1])
+
+e1=Employee("Harry",12000)
+print(e1.name)
+print(e1.salary)
+
+string="faiz-50000"
+e2=Employee.fromStr(string)
+print(e2.name)
+print(e2.salary)
+
+
+#dir method
+
+x=[1,2,3]
+print(dir(x))
+
+#super keyword
+
+#refers to the parent class
