@@ -1,0 +1,49 @@
+#magic dunder methods
+#__len method
+
+class Employee:
+    name="Harry"
+    def __len__(self): #dunder method
+        i=0
+        for c in self.name:
+            i=i+1
+        return i
+    
+e= Employee()
+print(e.name)
+print(len(e))
+
+#__str__method __repr__ is used to convert object to a string representation
+#__call__ method allows us to create objects that behave like functions
+
+#method overriding
+
+#helps us redefine a method in derived class
+
+class shape:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+
+    def area(self):
+        return self.x*self.y
+class circle:
+    def __init__(self,radius):
+        self.radius=radius
+    
+    def area(self):
+        return 3.14*self.radius*self.radius
+    
+rec=shape(3,5)
+print(rec.area())
+
+sq=circle(5)
+print(sq.area())
+
+#operator overloading
+
+#helps us to change the behavior of mathematical anc comparison operators for custom data types
+
+#vector method #day 77
+
+#circle class overrides the area method
