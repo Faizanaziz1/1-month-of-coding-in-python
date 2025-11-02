@@ -1,0 +1,145 @@
+#single inheritance
+
+#where a class inherits properties and behaviours from a single parent class
+
+#simplest form of inheritance
+
+class Animal:
+        def __init__(self,name,species):
+                self.name=name 
+                self.species=species
+        def make_sound(self):
+                print("sound made by the animal")
+class Dog(Animal):
+        def __init__(self, name, breed):
+                Animal.__init__(self,name, species=Dog)
+                self.breed=breed
+
+        def make_sound(self):
+                print("bark")
+
+d=Dog("dog","doggerman")
+d.make_sound()
+
+a=Animal("dog","dog")
+a.make_sound()
+
+#helps in code reusability
+
+#multiple inheritance
+
+#one child class and 2 parent class or more
+
+class Employee:
+        def __init__(self,name):
+                self.name=name
+        def show(self):
+                print(f"the name is {self.name}")
+
+class dancer:
+        def __init__(self,dance):
+                self.dance=dance
+        def show(self):
+                print(f"the dance is {self.dance}")
+
+class danceremployee(Employee,dancer):
+        def __init__(self,dance,name):
+                self.dance=dance
+                self.name=name
+
+o=danceremployee("kathak","faizan")
+print(o.name)
+print(o.dance)
+o.show()
+print(danceremployee.mro()) #where will the method be found
+
+#multi level inheritance
+
+#when a derived class is inherited from another derived class
+#specialized class
+
+# Example of Multilevel Inheritance in Python
+
+# Base class
+class Grandparent:
+    def show_grandparent(self):
+        print("This is the Grandparent class")
+
+# Derived class (inherits from Grandparent)
+class Parent(Grandparent):
+    def show_parent(self):
+        print("This is the Parent class")
+
+# Derived class (inherits from Parent)
+class Child(Parent):
+    def show_child(self):
+        print("This is the Child class")
+
+# Create object of Child
+obj = Child()
+
+obj.show_grandparent()   # from Grandparent
+obj.show_parent()        # from Parent
+obj.show_child()         # from Child
+#hybrid inheritance and hierarchical inheritance
+
+#hierarchical inheritance
+
+#multiple child classes inherit from a single parent class.
+
+# Parent class
+class Parent:
+    def show_parent(self):
+        print("This is the Parent class")
+
+# Child classes inheriting from Parent
+class Child1(Parent):
+    def show_child1(self):
+        print("This is Child 1 class")
+
+class Child2(Parent):
+    def show_child2(self):
+        print("This is Child 2 class")
+
+# Create objects
+c1 = Child1()
+c2 = Child2()
+
+# Accessing parent and child methods
+c1.show_parent()
+c1.show_child1()
+
+c2.show_parent()
+c2.show_child2()
+
+#hybrid inheritance
+#Hybrid inheritance is a combination of two or more types of inheritance (like multiple + multilevel).
+#It often forms a diamond-shaped structure.
+
+# Base class
+class Grandparent:
+    def show_grandparent(self):
+        print("This is the Grandparent class")
+
+# Intermediate classes
+class Father(Grandparent):
+    def show_father(self):
+        print("This is the Father class")
+
+class Mother(Grandparent):
+    def show_mother(self):
+        print("This is the Mother class")
+
+# Derived class inherits from both Father and Mother
+class Child(Father, Mother):
+    def show_child(self):
+        print("This is the Child class")
+
+# Create object of Child
+obj = Child()
+
+# Accessing all methods
+obj.show_grandparent()
+obj.show_father()
+obj.show_mother()
+obj.show_child()
