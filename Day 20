@@ -1,0 +1,46 @@
+#time module
+
+#set of functions to work with time related operations
+
+import time
+
+def usingwhile():
+    i=0
+    while i<51000:
+        i=i+1
+        print(i)
+
+def usingfor():
+    for i in range(50001):
+        print(i)
+
+init=time.time()
+usingwhile()
+t1=time.time()-init
+init=time.time()
+usingfor()
+print(time.time()-init)
+print(t1)
+
+#time.sleep(3) make next function wait for 3 seconds
+#time.strftime
+
+#command line utilities
+#commands that can be run from terminal or command line interface
+
+#walrus operator
+
+#allows to assign a value to the variable with an expression
+
+print(a:=False)
+
+numbers=[1,2,3,4,5]
+
+while (n:= len(numbers)) > 1:
+    print(numbers.pop())
+
+#shutil module
+
+#The shutil module in Python is a standard library module that provides a higher-level interface for file operations — especially for copying, moving, deleting, and archiving files and directories.
+
+#It stands for “shell utilities.
