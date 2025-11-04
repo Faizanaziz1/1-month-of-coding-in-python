@@ -1,0 +1,29 @@
+#requests module
+
+#enables developers to send http requests in python
+
+import requests
+
+response=requests.get("https://www.google.com")
+print(response.text)
+
+
+#generators in python
+
+#allows us to create an iterable sequence of values
+
+
+def my_generator():
+    for i in range(500000):
+        yield(i)
+gen=my_generator()
+
+print(next(gen))
+print(next(gen))
+
+#generator can be used in a variety of ways such as list comprehension loop etc
+
+for j in gen:
+    print(j)
+
+
