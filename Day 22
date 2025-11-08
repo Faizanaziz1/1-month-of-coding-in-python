@@ -1,0 +1,8 @@
+#function caching
+
+#improves the performance of the program
+#by storing the results of the function call so that we can reuse the results instead of recomputing them
+
+#multiprocessing
+#multithreading
+#regular expressions
